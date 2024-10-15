@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitzungskosten Rechner</title>
+    <!-- Bootstrap CSS für das Styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sitzungskosten Rechner</h1>
+        <button id="pauseResumeButton" class="btn btn-success" data-toggle="tooltip" title="Counter starten, pausieren, fortsetzen"><i class="fas fa-play"></i></button>
+        <button id="resetButton" class="btn btn-danger" data-toggle="tooltip" title="Counter zurücksetzen"><i class="fas fa-redo"></i></button>
+        <button id="openModal" class="btn btn-secondary" data-toggle="tooltip" title="Einstellungen öffnen"><i class="fas fa-cog"></i></button>
+        <div id="details">Teilnehmende: 5, Stundenlohn: 50 CHF</div>
+        <div id="elapsed-time">Verstrichene Zeit: 00:00:00</div>
+        <div id="cost">Kosten: 0.00 CHF</div>
+    </div>
+
+    <!-- Modal für Einstellungen -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Einstellungen</h2>
+            <label for="participantsSlider">Teilnehmende (Anzahl): <span id="participantsValue">5</span></label>
+            <input type="range" id="participantsSlider" class="form-control" value="5" min="1" max="100">
+            <br>
+            <label for="salarySlider">Durchschnittlicher Stundenlohn (CHF): <span id="salaryValue">50</span></label>
+            <input type="range" id="salarySlider" class="form-control" value="50" min="1" max="200">
+            <br>
+            <button id="saveSettings" class="btn btn-primary">Speichern</button>
+        </div>
+    </div>
+
+    <!-- Popper.js für Bootstrap-Tooltips -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- jQuery und Bootstrap JavaScript für Interaktivität und Tooltips -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- FontAwesome für Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
