@@ -94,6 +94,7 @@ $(document).ready(function () {
         totalSeconds = 0;
         isPaused = false;
         isStarted = false;
+        localStorage.removeItem(totalSeconds);
         loadSettings();
         updatePauseResumeButton('play');
         clearInterval(intervalId);
